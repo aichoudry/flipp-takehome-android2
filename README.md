@@ -5,7 +5,7 @@ Jetpack Compose is now the recommended way to make Android Apps
 
 ### Decisions and Assumptions
 #### Architecture
-- MVVM was chosen as it recommended by Google
+- MVI is used
 - Basic routing was setup in anticipation of an additional screen in the future
 - SearchRoute -> SearchScreen to move the ViewModel initialization and collectAsState() from NavHost
 - DI is done with Dagger
