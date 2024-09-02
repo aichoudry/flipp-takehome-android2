@@ -48,7 +48,7 @@ class SearchViewModelTest {
 
   @Test
   fun onPostalChanged_ValidCanada() {
-    val postal = "L5M8A2"
+    val postal = "90210"
     viewmodel.onQueryChanged(postal)
     assertEquals(postal, viewmodel.postalCodeState.value.text)
     assertEquals(null, viewmodel.postalCodeState.value.error)
@@ -86,7 +86,7 @@ class SearchViewModelTest {
   @Test
   fun onSearchTrigger_ValidInputs() {
     val query = "chicken"
-    val postal = "L5M8A2"
+    val postal = "90210"
 
     val flyerItems = listOf(
       FlyerItem(
@@ -140,7 +140,7 @@ class SearchViewModelTest {
   @Test
   fun onSearchTrigger_ValidInputsFails() {
     val query = "chicken"
-    val postal = "L5M8A2"
+    val postal = "90210"
 
     coEvery { repository.getSearchResults(query, postal) } returns null
 

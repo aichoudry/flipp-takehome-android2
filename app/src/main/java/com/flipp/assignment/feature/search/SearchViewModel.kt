@@ -19,7 +19,7 @@ class SearchViewModel @Inject constructor(
   val queryState = _queryState.asStateFlow()
 
   // The current text in the TextField for PostalCode
-  private val _postalCodeState = MutableStateFlow(TextFieldState(text = "L5M8A2"))
+  private val _postalCodeState = MutableStateFlow(TextFieldState(text = "90210"))
   val postalCodeState = _postalCodeState.asStateFlow()
 
   // The state of the SearchResults on the screen

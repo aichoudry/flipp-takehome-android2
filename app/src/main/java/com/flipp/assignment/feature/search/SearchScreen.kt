@@ -143,7 +143,7 @@ internal fun SearchScreenPopulated(
 ) {
   SearchScreen(searchResultUIState = searchResultUIState,
     queryUIState = TextFieldState(text = "Chicken", error = null),
-    postalCodeUIState = TextFieldState(text = "L5M8A2", error = null),
+    postalCodeUIState = TextFieldState(text = "90210", error = null),
     onQueryChanged = {},
     onPostalCodeChanged = {},
     onSearchTriggered = {})
@@ -154,7 +154,7 @@ internal fun SearchScreenPopulated(
 internal fun SearchScreenLoading() {
   SearchScreen(searchResultUIState = SearchResultUIState.Loading,
     queryUIState = TextFieldState("Chicken"),
-    postalCodeUIState = TextFieldState("L5M8A2"),
+    postalCodeUIState = TextFieldState("90210"),
     onQueryChanged = {},
     onPostalCodeChanged = { },
     onSearchTriggered = { })
