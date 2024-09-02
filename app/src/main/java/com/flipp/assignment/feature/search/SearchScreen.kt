@@ -26,6 +26,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.flipp.assignment.ui.parameterprovider.SearchResultPreviewParameterProvider
@@ -39,9 +40,9 @@ fun SearchRoute(
   SearchScreen(
     modifier = modifier,
     navController = navController,
-    searchResultUIState = viewModel.searchResultUiState.collectAsState().value,
-    queryUIState = viewModel.queryState.collectAsState().value,
-    postalCodeUIState = viewModel.postalCodeState.collectAsState().value,
+    searchResultUIState = viewModel.searchResultUiState.collectAsStateWithLifecycle().value,
+    queryUIState = viewModel.queryState.collectAsStateWithLifecycle().value,
+    postalCodeUIState = viewModel.postalCodeState.collectAsStateWithLifecycle().value,
     onQueryChanged = viewModel::onQueryChanged,
     onPostalCodeChanged = viewModel::onPostalCodeChanged,
     onSearchTriggered = viewModel::onSearchTrigger
